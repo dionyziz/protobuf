@@ -13,10 +13,12 @@ wget --no-verbose ${DEB_DEPENDENCIES_URL} -O ${DEB_DEPENDENCIES_TARBALL}
 tar zxfv ${DEB_DEPENDENCIES_TARBALL}
 sudo dpkg -i ${DEB_DEPENDENCIES_DIR}/${SLEUTHKIT_DEB} ${DEB_DEPENDENCIES_DIR}/${PYTSK_DEB}
 
+git clone https://github.com/google/protobuf.git
+cd protobuf
+pwd
 echo "Running autogen.sh..."
 # minimal testcase for https://github.com/google/protobuf/issues/149
 ./autogen.sh
-echo "Running autogen.sh again..."
 ./autogen.sh
 echo "Running ./configure --prefix=/usr"
 ./configure --prefix=/usr
