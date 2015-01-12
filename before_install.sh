@@ -1,8 +1,4 @@
 #!/bin/bash
-sudo add-apt-repository ppa:kristinn-l/plaso-dev -y
-sudo apt-get update -q
-sudo apt-get install python-protobuf libprotoc-dev protobuf-compiler m2crypto python-support python-pandas libdistorm64-1 libdistorm64-dev python-psutil pytsk3
-
 git clone https://github.com/google/protobuf.git
 cd protobuf
 pwd
